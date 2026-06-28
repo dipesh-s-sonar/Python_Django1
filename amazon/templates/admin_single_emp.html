@@ -1,10 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% include "admin_header.html" %}
+
+	<!-- end #menu -->
+<div id="page" xmlns="http://www.w3.org/1999/html">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="page-content">
+					<div id="content">
+						<center>
+						<div class="post">
+							<h2 class="title"><a href="#"> Single Record  </a></h2>
+                        </div>
+						<form method="POST" action="/empdelete/{{record.id}}">
+								{% csrf_token %}
+							Emp ID: <input type="text" id="txtEmpid" name="txtEmpid" value="{{record.id}}"  class="form-control" required><br>
+							Name : <input type="text" id="txtName" name="txtName" value="{{record.name}}"  class="form-control" required><br>
+							Mobile :<input type="text" id="txtMobile" name="txtMobile" value="{{record.mobile}}"  class="form-control" required><br>
+							Email ID :<input type="text" id="txtEmail" name="txtEmail" value="{{record.email}}"  class="form-control" required><br>
+							Address :<input type="text" id="txtAddress" name="txtAddress" value="{{record.address}}"  class="form-control" required><br>
+							City:<input type="text" id="txtCity" name="txtCity" value="{{record.city}}"  class="form-control" required><br>
+							Designation :<input type="text" id="txtDesignation" name="txtDesignation" value="{{record.designation}}"  class="form-control" required><br>
+							Salary :<input type="text" id="txtSalary" name="txtSalary" value="{{record.salary}}"  class="form-control" required><br><br>
+
+							<input type="submit" value="Update" class="btn btn-success"/>&nbsp; &nbsp;
+							<input type="submit" value="Delete" class="btn btn-danger"/>
+
+						</form>
+						</center>
+						<div style="clear: both;">&nbsp;</div>
+					</div>
+					<!-- end #content -->
+					<div id="sidebar">
+						<ul>
+							<li>
+								<div style="text-align:center;">
+									<a href="/addition" class="btn btn-primary">Addition</a>
+								</div>
+								<h2>Aliquam tempus</h2>
+								<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+							</li>
+							<li>
+								<h2>Categories</h2>
+								<ul>
+									<li><a href="#">Aliquam libero</a></li>
+									<li><a href="#">Consectetuer adipiscing elit</a></li>
+									<li><a href="#">Metus aliquam pellentesque</a></li>
+									<li><a href="#">Suspendisse iaculis mauris</a></li>
+									<li><a href="#">Urnanet non molestie semper</a></li>
+									<li><a href="#">Proin gravida orci porttitor</a></li>
+								</ul>
+							</li>
+							<li>
+								<h2>Blogroll</h2>
+								<ul>
+									<li><a href="#">Aliquam libero</a></li>
+									<li><a href="#">Consectetuer adipiscing elit</a></li>
+									<li><a href="#">Metus aliquam pellentesque</a></li>
+									<li><a href="#">Suspendisse iaculis mauris</a></li>
+									<li><a href="#">Urnanet non molestie semper</a></li>
+									<li><a href="#">Proin gravida orci porttitor</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- end #sidebar -->
+				</div>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+{% include "footer.html" %}

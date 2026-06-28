@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<form method="POST" action="/add_op/">
+    <h1>Addition of Two Number</h1>
+    {% csrf_token %}
+        Enter the First Number : <input type="text" name="txtFnumber" placeholder="Enter the First Number">
+        <br> <br>
+        Enter the Second Number : <input type="text" name="txtSnumber" placeholder="Enter the First Number">
+        <br> <br>
+                                  <input type="submit" value="Add">
+</form>
 </body>
 </html>
