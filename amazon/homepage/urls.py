@@ -36,5 +36,6 @@ urlpatterns = [
     path('empshow/',views.admin_show_emp,name='Show Single Employee Page'),
     path('adminsingle/<int:id>',views.admin_single_emp, name='Single Employee Page'),
     path('empdelete/<int:id>',views.admin_delete_emp,name='Delete Single Employee Page'),
-    path('admin_update_emp/',views.admin_update_emp,name='Update Single Employee Page'),
+    path("admin_update_emp/<int:id>",views.admin_update_emp,name="Update Employee Page"),
+
 ]

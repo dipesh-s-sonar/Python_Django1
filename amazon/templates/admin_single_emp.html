@@ -10,21 +10,43 @@
 						<div class="post">
 							<h2 class="title"><a href="#"> Single Record  </a></h2>
                         </div>
-						<form method="POST" action="/empdelete/{{record.id}}">
-								{% csrf_token %}
-							Emp ID: <input type="text" id="txtEmpid" name="txtEmpid" value="{{record.id}}"  class="form-control" required><br>
-							Name : <input type="text" id="txtName" name="txtName" value="{{record.name}}"  class="form-control" required><br>
-							Mobile :<input type="text" id="txtMobile" name="txtMobile" value="{{record.mobile}}"  class="form-control" required><br>
-							Email ID :<input type="text" id="txtEmail" name="txtEmail" value="{{record.email}}"  class="form-control" required><br>
-							Address :<input type="text" id="txtAddress" name="txtAddress" value="{{record.address}}"  class="form-control" required><br>
-							City:<input type="text" id="txtCity" name="txtCity" value="{{record.city}}"  class="form-control" required><br>
-							Designation :<input type="text" id="txtDesignation" name="txtDesignation" value="{{record.designation}}"  class="form-control" required><br>
-							Salary :<input type="text" id="txtSalary" name="txtSalary" value="{{record.salary}}"  class="form-control" required><br><br>
+						<form action="/admin_update_emp/{{record.id}}" method="POST">
+							{% csrf_token %}
+						
+							Emp ID
+							<input type="text" name="txtEmpid" value="{{record.id}}" class="form-control">
 
-							<input type="submit" value="Update" class="btn btn-success"/>&nbsp; &nbsp;
-							<input type="submit" value="Delete" class="btn btn-danger"/>
+							Name
+							<input type="text" name="txtName" value="{{record.name}}" class="form-control">
+
+							Mobile
+							<input type="text" name="txtMobile" value="{{record.mobile}}" class="form-control">
+
+							Email
+							<input type="text" name="txtEmail" value="{{record.email}}" class="form-control">
+
+							Address
+							<input type="text" name="txtAddress" value="{{record.address}}" class="form-control">
+
+							City
+							<input type="text" name="txtCity" value="{{record.city}}" class="form-control">
+
+							Designation
+							<input type="text" name="txtDesignation" value="{{record.designation}}" class="form-control">
+
+							Salary
+							<input type="text" name="txtSalary" value="{{record.salary}}" class="form-control">
+
+							<br>
+
+							<input type="submit" value="Update" class="btn btn-success">
+
+							<a href="/empdelete/{{record.id}}" class="btn btn-danger">
+								Delete
+							</a>
 
 						</form>
+
 						</center>
 						<div style="clear: both;">&nbsp;</div>
 					</div>
